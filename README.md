@@ -1,172 +1,172 @@
-# 📧 Micro SaaS - Sistema de Follow-up Automático de Leads
+# 📧 Micro SaaS - Automated Lead Follow-up System
 
-Sistema completo de gerenciamento e follow-up automático de leads com envio de emails em sequência (D+1, D+3, D+7).
+Complete lead management and automated follow-up system with sequential email campaigns (D+1, D+3, D+7).
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![Node](https://img.shields.io/badge/Node.js-Backend-green)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.3.2-blue)
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- 🎯 **Gerenciamento de Leads**: Adicione, edite e acompanhe seus leads
-- 📧 **Templates Personalizáveis**: Crie templates de email para D+1, D+3 e D+7
-- ⚡ **Envio Automático**: Emails são enviados automaticamente nos dias programados
-- 🎨 **Interface Moderna**: Design bonito com tema de outono usando Tailwind CSS
-- ✅ **Status de Leads**: Marque leads como "Pendente", "Marcado" ou "Sem Interesse"
-- 📝 **Personalização**: Use `[Nome]` nos templates para personalizar emails
-- 🔄 **Sincronização**: Frontend e backend rodando juntos com um único comando
+- 🎯 **Lead Management**: Add, edit, and track your leads
+- 📧 **Customizable Templates**: Create email templates for D+1, D+3, and D+7
+- ⚡ **Automatic Sending**: Emails are sent automatically on scheduled days
+- 🎨 **Modern Interface**: Beautiful autumn-themed design using Tailwind CSS
+- ✅ **Lead Status**: Mark leads as "Pending", "Booked", or "Not Interested"
+- 📝 **Personalization**: Use `[Name]` in templates to personalize emails
+- 🔄 **Synchronization**: Frontend and backend running together with a single command
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 ### Frontend
 - React 18.2.0
 - Tailwind CSS 3.3.2
-- Axios para requisições HTTP
-- Design responsivo e moderno
+- Axios for HTTP requests
+- Responsive and modern design
 
 ### Backend
-- Node.js com Express
-- SQLite (banco de dados leve)
-- Node-cron para agendamento
-- Nodemailer para envio de emails
-- CORS habilitado
+- Node.js with Express
+- SQLite (lightweight database)
+- Node-cron for scheduling
+- Nodemailer for email sending
+- CORS enabled
 
-## 📋 Pré-requisitos
+## 📋 Prerequisites
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
-- Conta de email com SMTP (Gmail, Outlook, etc.)
+- Node.js (version 14 or higher)
+- npm or yarn
+- Email account with SMTP (Gmail, Outlook, etc.)
 
-## 🔧 Instalação
+## 🔧 Installation
 
-1. **Clone o repositório**
+1. **Clone the repository**
 ```bash
-git clone https://github.com/seu-usuario/micro-saas.git
+git clone https://github.com/your-username/micro-saas.git
 cd micro-saas
 ```
 
-2. **Instale as dependências**
+2. **Install dependencies**
 ```bash
-# Instalar dependências do projeto raiz
+# Install root project dependencies
 npm install
 
-# Instalar dependências do cliente
+# Install client dependencies
 cd client
 npm install
 
-# Instalar dependências do servidor
+# Install server dependencies
 cd ../server
 npm install
 
-# Voltar para a raiz
+# Return to root
 cd ..
 ```
 
-3. **Configure as variáveis de ambiente**
+3. **Configure environment variables**
 
-Crie um arquivo `.env` na pasta `server`:
+Create a `.env` file in the `server` folder:
 ```env
 ALLOWED_ORIGINS=http://localhost:3000
 ```
 
-Crie um arquivo `.env` na pasta `client`:
+Create a `.env` file in the `client` folder:
 ```env
 REACT_APP_API_BASE=http://localhost:3001/api
 ```
 
-4. **Inicie o projeto**
+4. **Start the project**
 ```bash
-# Na pasta raiz do projeto
+# In the project root folder
 npm start
 ```
 
-Isso iniciará automaticamente:
-- **Backend** em `http://localhost:3001`
-- **Frontend** em `http://localhost:3000`
+This will automatically start:
+- **Backend** at `http://localhost:3001`
+- **Frontend** at `http://localhost:3000`
 
-## ⚙️ Configuração SMTP
+## ⚙️ SMTP Configuration
 
-1. Acesse a aba **Configurações** no aplicativo
-2. Preencha os dados do seu servidor SMTP:
+1. Access the **Settings** tab in the application
+2. Fill in your SMTP server details:
    - **SMTP Host**: Ex: `smtp.gmail.com`
-   - **SMTP Port**: Ex: `587` (TLS) ou `465` (SSL)
-   - **SMTP User**: Seu email
-   - **SMTP Password**: Senha do app ou senha do email
-   - **FROM Email**: Email remetente
+   - **SMTP Port**: Ex: `587` (TLS) or `465` (SSL)
+   - **SMTP User**: Your email
+   - **SMTP Password**: App password or email password
+   - **FROM Email**: Sender email
 
 ### Gmail
-Para usar o Gmail, você precisa:
-1. Ativar "Verificação em duas etapas"
-2. Gerar uma "Senha de app" em https://myaccount.google.com/apppasswords
-3. Usar essa senha no campo SMTP Password
+To use Gmail, you need to:
+1. Enable "2-Step Verification"
+2. Generate an "App Password" at https://myaccount.google.com/apppasswords
+3. Use this password in the SMTP Password field
 
-## 📖 Como Usar
+## 📖 How to Use
 
-### 1. Adicionar Leads
-- Vá para a aba **Leads**
-- Preencha o nome e email do lead
-- Clique em **Adicionar Lead**
+### 1. Add Leads
+- Go to the **Leads** tab
+- Fill in the lead's name and email
+- Click **Add Lead**
 
-### 2. Gerenciar Templates
-- Vá para a aba **Templates**
-- Clique em **➕ D+1**, **➕ D+3** ou **➕ D+7** para criar novos templates
-- Edite os templates existentes diretamente nos campos
-- Use `[Nome]` no assunto ou corpo para personalizar com o nome do lead
+### 2. Manage Templates
+- Go to the **Templates** tab
+- Click **➕ D+1**, **➕ D+3**, or **➕ D+7** to create new templates
+- Edit existing templates directly in the fields
+- Use `[Name]` in the subject or body to personalize with the lead's name
 
-### 3. Acompanhar Status
-- Na tabela de leads, altere o status conforme necessário:
-  - **⏳ Pendente**: Lead aguardando retorno
-  - **✅ Marcado**: Lead agendou reunião/compra
-  - **❌ Sem Interesse**: Lead não demonstrou interesse
+### 3. Track Status
+- In the leads table, change the status as needed:
+  - **⏳ Pending**: Lead awaiting response
+  - **✅ Booked**: Lead scheduled meeting/purchase
+  - **❌ Not Interested**: Lead showed no interest
 
-### 4. Emails Automáticos
-Os emails são enviados automaticamente:
-- **D+1**: 1 dia após adicionar o lead
-- **D+3**: 3 dias após adicionar o lead
-- **D+7**: 7 dias após adicionar o lead
+### 4. Automatic Emails
+Emails are sent automatically:
+- **D+1**: 1 day after adding the lead
+- **D+3**: 3 days after adding the lead
+- **D+7**: 7 days after adding the lead
 
-## 🗂️ Estrutura do Projeto
+## 🗂️ Project Structure
 
 ```
 micro-saas/
-├── client/                 # Frontend React
+├── client/                 # React frontend
 │   ├── public/
 │   ├── src/
-│   │   ├── App.js         # Componente principal
+│   │   ├── App.js         # Main component
 │   │   ├── index.js       # Entry point
-│   │   └── index.css      # Estilos Tailwind
-│   ├── tailwind.config.js # Configuração Tailwind
+│   │   └── index.css      # Tailwind styles
+│   ├── tailwind.config.js # Tailwind configuration
 │   └── package.json
-├── server/                 # Backend Node.js
-│   ├── index.js           # Servidor Express
-│   ├── database.js        # Configuração SQLite
+├── server/                 # Node.js backend
+│   ├── index.js           # Express server
+│   ├── database.js        # SQLite configuration
 │   └── package.json
-├── package.json           # Scripts do projeto
+├── package.json           # Project scripts
 └── README.md
 ```
 
-## 🎨 Personalização
+## 🎨 Customization
 
-### Cores do Tema
-O projeto usa um tema de outono. Para mudar, edite `client/tailwind.config.js`:
+### Theme Colors
+The project uses an autumn theme. To change it, edit `client/tailwind.config.js`:
 
 ```javascript
 theme: {
   extend: {
     colors: {
-      // Adicione suas cores personalizadas aqui
+      // Add your custom colors here
     }
   }
 }
 ```
 
-### Templates Padrão
-Os templates iniciais estão em `server/database.js`. Você pode alterá-los antes da primeira execução.
+### Default Templates
+Initial templates are in `server/database.js`. You can change them before the first run.
 
-## 🐛 Solução de Problemas
+## 🐛 Troubleshooting
 
-### Porta 3000 já está em uso
+### Port 3000 is already in use
 ```bash
 # Windows
 netstat -ano | findstr :3000
@@ -176,47 +176,47 @@ taskkill /PID <PID> /F
 lsof -ti:3000 | xargs kill -9
 ```
 
-### Emails não estão sendo enviados
-1. Verifique as configurações SMTP
-2. Certifique-se de que a senha do app está correta (Gmail)
-3. Verifique se o firewall não está bloqueando a porta SMTP
+### Emails are not being sent
+1. Check SMTP settings
+2. Make sure the app password is correct (Gmail)
+3. Check if the firewall is not blocking the SMTP port
 
-### Tailwind não está funcionando
+### Tailwind is not working
 ```bash
 cd client
 rm -rf node_modules/.cache build
 npm start
 ```
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+Contributions are welcome! Feel free to:
 
-1. Fazer um Fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 💡 Ideias para Melhorias
+## 💡 Ideas for Improvements
 
-- [ ] Autenticação de usuários
-- [ ] Dashboard com estatísticas
-- [ ] Exportação de relatórios em PDF/CSV
-- [ ] Integração com CRM
-- [ ] Múltiplos funis de vendas
-- [ ] A/B testing de templates
-- [ ] Webhooks para integrações
-- [ ] Modo escuro
+- [ ] User authentication
+- [ ] Dashboard with statistics
+- [ ] Report export in PDF/CSV
+- [ ] CRM integration
+- [ ] Multiple sales funnels
+- [ ] A/B testing for templates
+- [ ] Webhooks for integrations
+- [ ] Dark mode
 
-## 📞 Suporte
+## 📞 Support
 
-Se você encontrar algum problema ou tiver sugestões, por favor abra uma [issue](https://github.com/seu-usuario/micro-saas/issues).
+If you encounter any issues or have suggestions, please open an [issue](https://github.com/your-username/micro-saas/issues).
 
 ---
 
-Desenvolvido com ❤️ usando React, Node.js e Tailwind CSS
+Developed with ❤️ using React, Node.js, and Tailwind CSS

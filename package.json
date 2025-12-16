@@ -1,7 +1,7 @@
 {
   "name": "micro-saas",
   "version": "1.0.0",
-  "description": "Micro-SaaS para follow-up automático de leads com envio de emails em sequência D+1, D+3, D+7.",
+  "description": "Micro-SaaS for automated lead follow-up with sequential email campaigns (D+1, D+3, D+7).",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
     "concurrently": "^9.2.1"
